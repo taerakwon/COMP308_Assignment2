@@ -13,9 +13,18 @@ let logger = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 
-
-// URI
+// MONGOOSE FOR DB ACCESS
+let mongoose = require('mongoose');
+// MONGODB URI
 let config = require('./config/db');
+
+// MONGO DB CONNECTION (DEFINING DB)
+mongoose.connect(process.env.URI || config.URI);
+let db = mongoose.connection;
+db.on('error', console.error.bind(console, 'mongoose connection error:'));
+db.once('open', () => {
+  console.log("Successfully connected to MongoDB");
+})
 
 // DEFINE ROUTES
 let index = require('./routes/index');
