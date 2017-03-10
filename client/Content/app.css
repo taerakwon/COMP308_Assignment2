@@ -17,3 +17,8 @@ a {
   border-top: thin solid #000000;
   font-size: 14px;
 }
+
+/* HAMBURGER COLOR */
+#nav-toggle-button{
+  color: #006699;
+}
