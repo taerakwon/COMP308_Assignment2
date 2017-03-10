@@ -35,7 +35,7 @@ db.once('open', () => {
 
 // DEFINE ROUTES
 let index = require('./routes/index');
-let main = require('./routes/main'); // routes for main after logged in
+let contacts = require('./routes/businessContact'); // routes for businessContact after logged in
 let app = express();
 
 // view engine setup
@@ -64,7 +64,7 @@ app.use(passport.session());
 
 // ROUTE REDIRECTS
 app.use('/', index);
-app.use('/main', main);
+app.use('/businessContact', contacts);
 
 // PASSPORT USER CONFIGURATION
 let UserModel = require('./models/users');

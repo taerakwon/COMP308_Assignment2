@@ -22,19 +22,47 @@ let User = UserModel.User; // Alias for User Model - User object
 // define the contacts model
 let contact = require('../models/contacts');
 
-// create a function to check if the user is authenticated
-function requireAuth(req, res, next) {
-  // check if the user is logged in
-  if(!req.isAuthenticated()) {
-    return res.redirect('/login');
-  }
-  next();
-}
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('content/index', { 
     title: 'Home',
+    contacts: '',
+    userName: req.user ? req.user.username: ''
+  });
+});
+
+/* GET about page. */
+router.get('/about', function(req, res, next) {
+  res.render('content/about', { 
+    title: 'About',
+    contacts: '',
+    userName: req.user ? req.user.username: ''
+  });
+});
+
+/* GET projects page. */
+router.get('/projects', function(req, res, next) {
+  res.render('content/projects', { 
+    title: 'Projects',
+    contacts: '',
+    userName: req.user ? req.user.username: ''
+  });
+});
+
+/* GET services page. */
+router.get('/services', function(req, res, next) {
+  res.render('content/services', { 
+    title: 'Services',
+    contacts: '',
+    userName: req.user ? req.user.username: ''
+  });
+});
+
+/* GET contact page. */
+router.get('/contact', function(req, res, next) {
+  res.render('content/contact', { 
+    title: 'Contact',
+    contacts: '',
     userName: req.user ? req.user.username: ''
   });
 });
@@ -52,13 +80,13 @@ router.get('/login', (req, res, next)=>{
     });
     return;
   } else {
-    return res.redirect('/main'); // redirect to main
+    return res.redirect('/businessContact'); // redirect to businessContact
   }
 });
 
 // POST /login - process the login attempt
 router.post('/login', passport.authenticate('local', {
-  successRedirect: '/main',
+  successRedirect: '/businessContact',
   failureRedirect: '/login',
   failureFlash: 'bad login'
 }));
@@ -74,7 +102,7 @@ router.get('/register', (req, res, next)=>{
     });
     return;
   } else {
-    return res.redirect('/main'); // redirect to main
+    return res.redirect('/businessContact'); // redirect to businessContact
   }
 });
 
@@ -99,10 +127,12 @@ router.post('/register', (req, res, next)=>{
       }
       // if registration is successful
       return passport.authenticate('local')(req, res, ()=>{
-        res.redirect('/main');
+        res.redirect('/businessContact');
       });
     });
 });
+
+
 
 // GET /logout - process the logout request
 router.get('/logout', (req, res, next)=>{

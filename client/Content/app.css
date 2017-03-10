@@ -12,3 +12,8 @@ a {
 .navbar-collapse-taera{
   color: #006699;
 }
+
+.navbar-fixed-bottom{
+  border-top: thin solid #000000;
+  font-size: 14px;
+}

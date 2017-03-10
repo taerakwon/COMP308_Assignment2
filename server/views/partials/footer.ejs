@@ -1,6 +1,14 @@
-<nav class="navbar navbar-inverse navbar-fixed-bottom">
+<nav class="navbar navbar-fixed-bottom">
   <div class="container">
-    <h4  class="navbar-text">&copy; 2017 All Rights Reserved.</h4>
+    <h5 class="navbar-text">&copy; 2017 All Rights Reserved.</h4>
+    <ul class="nav navbar-nav navbar-right">
+      <% if(typeof userName == 'string' && userName) { %>
+      <li class="navbar-text"><i class="fa fa-user"></i> Welcome, <%= userName %></li>
+      <li><a href="/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+      <% } else { %>
+      <li><a href="/login"><i class="fa fa-sign-in"></i> Login</a></li>
+      <% } %>
+    </ul>
   </div>
 </nav>
 <!-- SCRIPTS -->
