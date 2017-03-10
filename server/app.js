@@ -13,6 +13,13 @@ let logger = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 
+// MODULES FOR AUTHENTICATION
+let session = require('express-session');
+let passport = require('passport');
+let passportlocal = require('passport-local');
+let LocalStrategy = passportlocal.Strategy;
+let flash = require('connect-flash'); // displays errors / login messages
+
 // MONGOOSE FOR DB ACCESS
 let mongoose = require('mongoose');
 // MONGODB URI
@@ -42,7 +49,27 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../client')));
 
+// SETUP SESSION
+app.use(session({
+  secret: "UserSecret",
+  saveUninitialized: true,
+  resave: true
+}));
+
+// INITIALISING FLASH AND PASSPORT
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+
+// ROUTE REDIRECTS
 app.use('/', index);
+
+// PASSPORT USER CONFIGURATION
+let UserModel = require('./models/users');
+let User = UserModel.User; // ALIAS FOR 'User' MODEL
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
