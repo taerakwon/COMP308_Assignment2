@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding-top: 50px;
+  font: 16px "Open Sans", sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #006699;
+}
+
+.navbar-collapse-taera{
+  color: #006699;
 }

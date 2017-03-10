@@ -35,14 +35,15 @@ db.once('open', () => {
 
 // DEFINE ROUTES
 let index = require('./routes/index');
+let main = require('./routes/main'); // routes for main after logged in
 let app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// uncomment after placing your favicon in /client
+//app.use(favicon(path.join(__dirname, 'client', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -63,6 +64,7 @@ app.use(passport.session());
 
 // ROUTE REDIRECTS
 app.use('/', index);
+app.use('/main', main);
 
 // PASSPORT USER CONFIGURATION
 let UserModel = require('./models/users');
