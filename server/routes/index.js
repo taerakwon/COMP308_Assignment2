@@ -45,7 +45,10 @@ router.get('/projects', function(req, res, next) {
   res.render('content/projects', { 
     title: 'Projects',
     contacts: '',
-    userName: req.user ? req.user.username: ''
+    userName: req.user ? req.user.username: '',
+    project_vba: 'Developed Resource Management tool using MS Excel and VBA for Ministry of Children and Youth Services',
+    project_sharepoint: 'Developed Intranet Website for Solutions Development Branch in Ministry of Children and Youth Services using SharePonint 2010 following W3C Standards',
+    project_kace: 'Configured DELL KACE inventory management system to meet the Business Strategy for Industrial Alliance Clarington'
   });
 });
 

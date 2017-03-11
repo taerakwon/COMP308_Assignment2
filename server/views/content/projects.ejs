@@ -8,13 +8,43 @@
 -->
 
 <% include ../partials/header.ejs %>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-offset-3 col-md-6">  
-          <h1><%= title %></h1>
-          <p>Welcome to <%= title %></p>
-      </div> <!-- .col-md-offset-3 col-md-6 -->
-    </div> <!-- .row -->
-  </div> <!-- .container -->
+  <div class="container-fluid">
+    <div class="row text-center">
+    
+    <!-- TABLE -->
+      <table class="project_table table">
+        <tr>
+          <th class="col1"></th>
+          <th class="col2">PROJECT</th>
+          <th class="col3">DATE</th>
+        </tr>
+        <tr>
+          <td class="col1"><a href="https://github.com/taerakwon/COMP308_Assignment2" target="_blank"><i class="fa fa-1x fa-github"></i> Github</a></td>
+          <td class="col2">MEAN Portfolio Development</td>
+          <td class="col3">Feb 2017 - ?</td>
+        </tr>
+        <tr>
+          <td class="col1"></td>
+          <td class="col2">Math Learning (K6) Android Application</td>
+          <td class="col3">Jan 2017 - ?</td>
+        </tr>
+        <tr>
+          <td class="col1"></td>
+          <td class="col2"><a href="#" data-toggle="tooltip" title="<%= project_vba %>" class="hvr-fade">VBA Macro Application (Resource Management Tool)</a></td>
+          <td class="col3">Jan 2016 - Aug 2016</td>
+        </tr>
+        <tr>
+          <td class="col1"></td>
+          <td class="col2"><a href="#" data-toggle="tooltip" title="<%= project_sharepoint %>" class="hvr-fade">SharePoint 2010 Intranet Website Development</a></td>
+          <td class="col3">Sept 2015 - Dec 2015</td>
+        </tr>
+        <tr>
+          <td class="col1"></td>
+          <td class="col2"><a href="#" data-toggle="tooltip" title="<%= project_kace %>" class="hvr-fade">DELL KACE Management System Data Configuration</a></td>
+          <td class="col3">Feb 2015 - Apr 2015</td>
+        </tr>
+      </table>
+    </div> <!-- .about -->
+  </div> <!-- .container-fluid -->
 <% include ../partials/footer.ejs %>
 

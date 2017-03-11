@@ -2,7 +2,7 @@
 
 body {
   padding-top: 50px;
-  font: 16px "Open Sans", sans-serif;
+  font: 16px "Open Sans", sans-serif;  
 }
 
 a {
@@ -19,6 +19,7 @@ a {
 
 .navbar-fixed-bottom{
   border-top: thin solid #000000;
+  background-color: #ffffff;
   font-size: 14px;
 }
 
@@ -29,8 +30,11 @@ a {
 
 /* CONTAINER FLUID 100% SIZE */
 .container-fluid{
-  padding-top: 10%;
-  width: 100%;
+  padding-top: 5%;
+  width: 99%;
+  height: 100%;
+  height: 80vh;
+  background-color: #fcfcfc;
 }
 
 /* ABOUT */
@@ -47,12 +51,51 @@ a {
   width: 50%;
 }
 
-.col1{
+.info_table .col1{
   width: 40%;
   text-align: right;
 }
-.col2{
+
+.info_table .col2{
   min-width: 175px;
   width: 60%;
   text-align: center;
+}
+
+/* PROJECTS */
+.project_table{
+  margin:auto;
+  width: 60%;
+}
+
+.project_table th{
+  background-color: #f9f9f9;
+}
+
+.project_table a, a:hover{
+  text-decoration: none;    
+}
+
+.project_table .col1, .col3{
+  width: 20%;
+  text-align: center;
+}
+
+.project_table .col2 {
+  width: 60%;
+  text-align: center;
+}
+
+/* SERVICES */
+.services_panel{
+  margin:auto;
+  width: 60%;
+}
+
+#android{
+  color: #00cc00;
+}
+
+.services_box{
+  height: 170px;
 }

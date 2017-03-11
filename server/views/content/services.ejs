@@ -7,13 +7,78 @@
 -->
 
 <% include ../partials/header.ejs %>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-offset-3 col-md-6">  
-          <h1><%= title %></h1>
-          <p>Welcome to <%= title %></p>
-      </div> <!-- .col-md-offset-3 col-md-6 -->
-    </div> <!-- .row -->
-  </div> <!-- .container -->
+  <div class="container-fluid">
+    <div class="row text-center services_panel">
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail services_box">
+        <br>
+          <i class="fa fa-5x fa-android hvr-rotate" alt="Android" id="android"></i>
+          <div class="caption">
+            <p>Android Development</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail services_box">
+        <br><br>
+          <img src="Assets/images/mean.png" alt="MEAN Stack">
+          <div class="caption">          
+            <p>MEAN Stack Development</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail services_box">
+        <br>
+          <img src="Assets/images/j2ee.png" alt="J2EE" width="100">
+          <div class="caption">          
+            <p>J2EE Development</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail services_box">
+        <br>
+          <img src="Assets/images/unity.jpg" alt="UNITY" width="100">
+          <div class="caption">          
+            <p>UNITY Game Development</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail services_box">
+          <img src="Assets/images/html5.png" alt="HTML 5" width="100">
+          <div class="caption">
+            <p>HTML5 Development</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail services_box">
+          <img src="Assets/images/asp.png" alt=".NET Development" width="100">
+          <div class="caption">
+            <p>.NET Development</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail services_box">
+          <img src="Assets/images/uft.png" alt="HP UFT Automation Testing" width="100">
+          <div class="caption">
+            <p>HP UFT Automation</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail services_box">
+        <br>
+          <i class="fa fa-refresh fa-spin fa-5x fa-fw" alt=".... and More!"></i>
+          <div class="caption">
+            <p>...and More!</p>
+          </div>
+        </div>
+      </div>
+    </div> <!-- row -->
+  </div> <!-- .container-fluid -->
 <% include ../partials/footer.ejs %>
 
