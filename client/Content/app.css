@@ -99,3 +99,23 @@ a {
 .services_box{
   height: 170px;
 }
+
+/* CONTACT */
+.contact_table{
+  margin:auto;
+  width: 30%;
+}
+
+.contact_table tr{
+  line-height: 40px;
+}
+
+.contact_table .col1{
+  width: 30%;
+  text-align: center;
+}
+
+.contact_table .col2{
+  width: 70%;
+  text-align: left;
+}

@@ -35,8 +35,8 @@ function requireAuth(req, res, next) {
 
 /* GET Business Contacts page. READ */
 router.get('/', (req, res, next) => {
-  // find all contacts in contacts collection
-  contacts.find( (err, contacts) => {
+  // find all contacts in contacts collection Sorts by Name
+  contacts.find({}, null, {sort:{Name:1}}, (err, contacts) => {
     if (err) {
       return console.error(err);
     }

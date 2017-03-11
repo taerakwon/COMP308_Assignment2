@@ -1,19 +1,29 @@
 <!-- 
   Author: Taera Kwon (300755802)
-  File Name: views/contact.ejs
+  File Name: contact.ejs
   Website Name: Projects | Taera
   Description:  This is the Contacts page 'views/contact'
                 This page will list methods to contact me
 -->
 
 <% include ../partials/header.ejs %>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-offset-3 col-md-6">  
-          <h1><%= title %></h1>
-          <p>Welcome to <%= title %></p>
-      </div> <!-- .col-md-offset-3 col-md-6 -->
-    </div> <!-- .row -->
-  </div> <!-- .container -->
+  <div class="container-fluid">
+    <div class="row text-center">
+      <table class="contact_table">
+        <tr>
+          <td class="col1"><i class="fa fa-2x fa-envelope"></i></td>
+          <td class="col2"><a href="mailto:taerakwon@gmail.com" class="hvr-skew">E-mail: taerakwon@gmail.com</a></td>
+        </tr>
+        <tr>
+          <td class="col1"><i class="fa fa-2x fa-linkedin-square"></i></td>
+          <td class="col2"><a href="https://www.linkedin.com/in/taera-kwon-50316639/" target="_blank" class="hvr-skew">Linkedin</a></td>
+        </tr>
+        <tr>
+          <td class="col1"><i class="fa fa-2x fa-github"></i></td>
+          <td class="col2"><a href="https://github.com/taerakwon" target="_blank" class="hvr-skew">Github</a></td>
+        </tr>
+      </table>
+    </div> <!-- .about -->
+  </div> <!-- .container-fluid -->
 <% include ../partials/footer.ejs %>
 
