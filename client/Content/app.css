@@ -9,6 +9,10 @@ a {
   color: #006699;
 }
 
+.theme-font{
+  color: #006699;
+}
+
 .navbar-collapse-taera{
   color: #006699;
 }
@@ -21,4 +25,34 @@ a {
 /* HAMBURGER COLOR */
 #nav-toggle-button{
   color: #006699;
+}
+
+/* CONTAINER FLUID 100% SIZE */
+.container-fluid{
+  padding-top: 10%;
+  width: 100%;
+}
+
+/* ABOUT */
+/* Profile Image */
+#about_profile{
+  width: 35%;
+  min-width: 150px;
+  max-width: 250px;
+  border-radius: 100%;
+}
+
+.info_table{
+  margin:auto;
+  width: 50%;
+}
+
+.col1{
+  width: 40%;
+  text-align: right;
+}
+.col2{
+  min-width: 175px;
+  width: 60%;
+  text-align: center;
 }
